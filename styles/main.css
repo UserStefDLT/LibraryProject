@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Ubuntu|Satisfy&display=swap');
+
+:root {
+    --pageBG: hsla(210, 89%, 21%, 89%);
+    --shadow1: rgba(20, 20, 20, 0.4);
+    --bodyBG: rgb(20,20,20);
+    
+    --bodyBG_day: rgb(240,240,240);
+    --text-off: rgb(20,20,20);
+    
+    --bodyBG_night: rgb(20,20,20);
+    --text-on: rgb(240,240,240);
+
+    --ny_light: rgb(240,240,240);
+    --ny_dark: rgb(20,20,20);
+
+    --c0: hsla(36, 50%, 50%, 100%);
+    --c1: hsla(72, 50%, 50%, 100%);
+    --c2: hsla(108, 50%, 50%, 100%);
+    --c3: hsla(144, 50%, 50%, 100%);
+    --c4: hsla(180, 50%, 50%, 100%);
+    --c5: hsla(216, 50%, 50%, 100%);
+    --c6: hsla(252, 50%, 50%, 100%);
+    --c7: hsla(288, 50%, 50%, 100%);
+    --c8: hsla(324, 50%, 50%, 100%);
+    --c9: hsla(360, 50%, 50%, 100%);
+}
+
+/* Body Stuff */
+body{
+    background-color: var(--bodyBG);
+    color: rgb(255,255,255);
+    font-family: 'Ubuntu', sans-serif;
+    /* margin: 0px; */
+}
+body.day{
+    background-color: var(--bodyBG_day);
+    color: var(--text-off);
+}
+body.night{
+    background-color: var(--bodyBG_night);
+    color: var(--text-on);
+}
+
+/* General and of multiple use. */
+.adjust-center{
+    display: flex;
+    justify-content: center;
+}
+.al-c{
+    display: flex;
+    justify-content: center;
+}
+.al-cc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tpline{
+    border-top: 1px solid rgba(80,80,80,0.5);
+}
+.btml{
+    border-bottom: 1px solid rgba(80,80,80,0.5);
+}
+.fcol{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* Style for declaring a region, titles, subtitles, etc. */
+a:link.normal{
+    color: white;
+    text-decoration: none;
+}
+a:visited.normal{
+    color: white;
+    text-decoration: none;
+}
+a:hover.normal{
+    /* color: hsla(220, 50%, 50%, 100%); */
+    color: white;
+    text-decoration: underline hsla(220, 70%, 50%, 100%);
+}
+
+.sub{
+    color: #aaa;
+}
+
+
+
+
+
+
+
+

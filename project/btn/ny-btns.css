@@ -1,0 +1,121 @@
+
+.s-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: inline-block;
+    text-align: center;
+    vertical-align: middle; */
+
+    font-family: 'Ubuntu', sans-serif;
+    height: 45px; width: auto;
+    min-width: 50px;
+    margin: 4px;
+    padding: 0px 8px;
+
+    cursor: pointer;
+    user-select: none;
+    background-color: #222;
+    /* box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.4); */
+    /* box-shadow: inset 0px 2px 2px rgba(20, 20, 20, 0.9); */
+    border-radius: 5px;
+    /* border: 0px solid transparent; */
+    /* border-radius: 0.25rem; */
+    color: white;
+    /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-width 0.1s ease-in-out; */
+    /* transition: all 0.15s ease-in-out; */
+}
+
+.r2g-on{
+    background-image: radial-gradient(hsla(0,100%,64%,30%),hsla(0,54%,24%,10%)),
+                    linear-gradient(to bottom, hsla(0,54%,20%,100%), hsla(0,64%,32%,100%));
+    border: 0px solid hsla(0, 72%, 25%, 100%);
+    border-bottom: 3px solid hsla(0, 72%, 25%, 100%);
+    transition: all .15s ease-in-out;
+    box-shadow: 3px 3px 3px rgba(20, 20, 20, 0.9);
+    }
+    .r2g-on:hover{
+    background-image: radial-gradient(hsla(0,100%,64%,50%),hsla(0,54%,24%,20%)),
+                    linear-gradient(to bottom, hsla(0,54%,24%,100%), hsla(0,64%,40%,100%));
+    border: 0px solid hsla(0, 72%, 25%, 100%);
+    border-bottom: 2px solid hsla(0, 72%, 25%, 100%);
+    transition: all .15s ease-in-out;
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.9);
+    }
+    .r2g-off{
+    background-image: linear-gradient(to bottom, hsla(0, 100%, 64%, 100%), hsla(0,72%,44%,100%));
+    border: 0px solid hsla(0,54%,12%,100%);
+    border-top: 0px solid hsla(0,54%,12%,100%);
+    transition: all .15s ease-in-out;
+    box-shadow: inset 2px 2px 2px rgba(20, 20, 20, 0.9);
+    }
+    .r2g-off:hover{
+    background-image: linear-gradient(to bottom, hsla(0,72%,54%,100%), hsla(0,64%,36%,100%));
+    border: 0px solid hsla(0,54%,12%,100%);
+    border-top: 2px solid hsla(0,54%,12%,100%);
+    transition: all .15s ease-in-out;
+    box-shadow: inset 1px 2px 2px rgba(20, 20, 20, 0.9),
+                inset 1px 1px 2px 1px rgba(20, 20, 20, 0.4);
+    }
+    .g2g-on{
+    background-image: radial-gradient(hsla(120,100%,64%,30%),hsla(120,54%,24%,10%)),
+                    linear-gradient(to bottom, hsla(120,54%,20%,100%), hsla(120,64%,32%,100%));
+    border: 0px solid hsla(120, 72%, 25%, 100%);
+    border-bottom: 3px solid hsla(120, 72%, 25%, 100%);
+    transition: all .15s ease-in-out;
+    box-shadow: 3px 3px 3px rgba(20, 20, 20, 0.9);
+    }
+    .g2g-on:hover{
+    background-image: radial-gradient(hsla(120,100%,64%,50%),hsla(120,54%,24%,20%)),
+                    linear-gradient(to bottom, hsla(120,54%,24%,100%), hsla(120,64%,40%,100%));
+    border: 0px solid hsla(120, 72%, 25%, 100%);
+    border-bottom: 2px solid hsla(120, 72%, 25%, 100%);
+    transition: all .15s ease-in-out;
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.9);
+    }
+    .g2g-off{
+    background-image: linear-gradient(to bottom, hsla(120, 100%, 64%, 100%), hsla(120,72%,44%,100%));
+    border: 0px solid hsla(120,54%,12%,100%);
+    border-top: 0px solid hsla(120,54%,12%,100%);
+    transition: all .15s ease-in-out;
+    box-shadow: inset 2px 2px 2px rgba(20, 20, 20, 0.9);
+    }
+    .g2g-off:hover{
+    background-image: linear-gradient(to bottom, hsla(120,72%,54%,100%), hsla(120,64%,36%,100%));
+    border: 0px solid hsla(120,54%,12%,100%);
+    border-top: 2px solid hsla(120,54%,12%,100%);
+    transition: all .15s ease-in-out;
+    box-shadow: inset 1px 2px 2px rgba(20, 20, 20, 0.9),
+                inset 1px 1px 2px 1px rgba(20, 20, 20, 0.4);
+    }
+    .b2g-on{
+    background-image: radial-gradient(hsla(240,100%,64%,30%),hsla(240,54%,24%,10%)),
+                    linear-gradient(to bottom, hsla(240,54%,20%,100%), hsla(240,64%,32%,100%));
+    border: 0px solid hsla(240, 72%, 25%, 100%);
+    border-bottom: 3px solid hsla(240, 72%, 25%, 100%);
+    transition: all .15s ease-in-out;
+    box-shadow: 3px 3px 3px rgba(20, 20, 20, 0.9);
+    }
+    .b2g-on:hover{
+    background-image: radial-gradient(hsla(240,100%,64%,50%),hsla(240,54%,24%,20%)),
+                    linear-gradient(to bottom, hsla(240,54%,24%,100%), hsla(240,64%,40%,100%));
+    border: 0px solid hsla(240, 72%, 25%, 100%);
+    border-bottom: 2px solid hsla(240, 72%, 25%, 100%);
+    transition: all .15s ease-in-out;
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.9);
+    }
+    .b2g-off{
+    background-image: linear-gradient(to bottom, hsla(240, 100%, 64%, 100%), hsla(240,72%,44%,100%));
+    border: 0px solid hsla(240,54%,12%,100%);
+    border-top: 0px solid hsla(240,54%,12%,100%);
+    transition: all .15s ease-in-out;
+    box-shadow: inset 2px 2px 2px rgba(20, 20, 20, 0.9);
+    }
+    .b2g-off:hover{
+    background-image: linear-gradient(to bottom, hsla(240,72%,54%,100%), hsla(240,64%,36%,100%));
+    border: 0px solid hsla(240,54%,12%,100%);
+    border-top: 2px solid hsla(240,54%,12%,100%);
+    transition: all .15s ease-in-out;
+    box-shadow: inset 1px 2px 2px rgba(20, 20, 20, 0.9),
+                inset 1px 1px 2px 1px rgba(20, 20, 20, 0.4);
+    }

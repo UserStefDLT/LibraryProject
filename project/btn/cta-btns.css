@@ -1,0 +1,733 @@
+/* @import url('https://fonts.googleapis.com/css?family=Alegreya|Ubuntu|Satisfy&display=swap'); */
+:root {
+    --heroWater: #00c2f1;
+    --heroWater2: #00639d;
+    --heroFire: #f67e21;
+    --heroFire2: #b31205;
+    --heroPlant: #ecf100;
+    --heroPlant2: #6b8b00;
+    --heroLight: #f4cf2c;
+    --heroLight2: #a46c08;
+    --heroDark: #c14cee;
+    --heroDark2: #461c7f;
+    --heroBG: #8f5323;
+    --heroBG2: #48270d;
+    --heroGold: #ffc830;
+    --heroGold2: #e06e1b;
+    --heroAwaken: #ff00dc;
+    --heroAwakenBG: #660033;
+    --heroStar: #fed700;
+    --heroStarBG: #663300;
+    --heroStatNumb: #f4a457;
+    --heroStatBuff: #7EF200;
+    --heroStatBG: #6e2700;
+    --heroToggle: #713b10;
+    --heroToggleSelect: #a15312;
+    --heroStatAtk: #c90000;
+    --heroStatHP: #11d100;
+    --heroStatDef: rgb(11, 59, 190);
+    --heroRarityCommon: #713b10;
+    --heroRarityRare: #888;
+    --heroRarityCrusher: #AAA;
+    --heroRarityEpic: rgba(255,200,0,0.9);
+    --heroRarityLegendary: #fff;
+    /* font-family: "Oxygen", sans-serif; */
+    /* --pageBG: hsla(210, 89%, 21%, 89%); */
+    /* --shadow1: rgba(20, 20, 20, 0.4); */
+}
+
+.center-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+
+/* ===============          =============== */
+/* =============== Main CSS =============== */
+/* ===============          =============== */
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+.navBar{
+    min-width: 240px;
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Alegreya', serif; */
+
+    margin-top: 12px;
+    margin-bottom: 8px;
+    padding: 4px;
+
+    /* border-radius: 10px; */
+    background-image: linear-gradient(to top, rgb(150, 80, 15), rgb(97, 55, 15));
+    box-shadow: 0px 3px 0px rgba(25,25,25,0.9),
+                0px -2px 0px rgba(100, 100, 100, 0.9),
+            inset 0px 4px 5px rgba(70, 40, 10, 0.5),
+            inset 0px -4px 5px rgba(175, 100, 10, 0.5);
+    
+    flex-wrap: wrap;
+}
+
+.navBtn{
+    height: auto; width: auto;
+    min-height: 32; min-width: 70px;
+    margin: 4px;
+    padding: 4px 8px;
+
+    color: white;
+    font-size: 18px;
+    text-align: center;
+
+    cursor: pointer;
+    background-image: linear-gradient(to top, rgba(200, 80, 0, 0.9) , rgba(255,200,0,0.9));
+    
+    border-top: 2px solid rgba(255, 255, 255, 1);
+    border-left: 2px solid rgba(230, 200, 75, 0.9);
+    border-right: 2px solid rgba(230, 200, 75, 0.9);
+    border-bottom: 2px solid rgba(200, 110, 50, 0.9);
+    border-radius: 5px;
+}
+.navBtn:hover{
+    background-image: linear-gradient(to top, rgb(255, 154, 0) , rgba(255,255,0,0.9));
+}
+
+/* ===============        =============== */
+/* =============== Heroes =============== */
+/* ===============        =============== */
+
+.topbar{
+    margin: 8px 8px 20px 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sortbtn{
+    height: 32px; width: auto;
+    margin: 2px;
+    padding: 0px 4px;
+    cursor: pointer;
+    user-select: none;
+    /* border: 1px solid black; */
+    /* border-radius: 5px; */
+    /* box-shadow: 2px 2px 2px magenta; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sortid{
+    background-color: #222;
+    transition: background-color 0.5s;
+}
+.sortid:hover{
+    background-color: #444;
+    transition: background-color 0.5s;
+}
+.sortatk{
+    background-color: rgba(200, 100, 100);
+    transition: background-color 0.5s;
+}
+.sortatk:hover{
+    background-color: rgba(250, 90, 90);
+    transition: background-color 0.5s;
+}
+.sorthp{
+    background-color: rgba(100, 200, 100);
+    transition: background-color 0.5s;
+}
+.sorthp:hover{
+    background-color: rgba(90, 250, 90);
+    transition: background-color 0.5s;
+}
+.sortdef{
+    background-color: rgba(100, 100, 200);
+    transition: background-color 0.5s;
+}
+.sortdef:hover{
+    background-color: rgba(90, 90, 250);
+    transition: background-color 0.5s;
+}
+.sortdmg{
+    background-color: #A11;
+    transition: background-color 0.5s;
+}
+.sortdmg:hover{
+    background-color: #C00;
+    transition: background-color 0.5s;
+}
+.sortsum{
+    background-color: #222;
+    transition: background-color 0.5s;
+}
+.sortsum:hover{
+    background-color: #333;
+    transition: background-color 0.5s;
+}
+.sortawaken:hover{
+    background-color: var(--heroAwakenBG);
+    transition: background-color 0.5s;
+}
+.sortstar:hover{
+    background-color: var(--heroStarBG);
+    transition: background-color 0.5s;
+}
+.sortcolor{
+    background-image: linear-gradient(to bottom, var(--heroToggleSelect), var(--heroToggle));
+    transition: background-color 0.5s;
+}
+.sortcolor:hover{
+    background-image: linear-gradient(to bottom, var(--heroStatNumb), var(--heroToggle));
+    transition: background-color 0.5s;
+}
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    min-width: 60px;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    padding: 4px 4px;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    /* Prevents the user from selecting. */
+    user-select: none;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Controlling location */
+.tooltiptext_ico{
+    bottom: 32px;
+    left: 0px;
+}
+.tooltiptext_row{
+    bottom: 50px;
+    left: 0px;
+}
+
+
+/* ===============        =============== */
+/* =============== FILTER =============== */
+/* ===============        =============== */
+
+/* ---Hero Elem--- */
+.fil-cir{
+    font-family: 'Ubuntu', sans-serif;
+    height: 45px; width: 45px;
+    margin: 4px;
+    /* padding: 0px 4px; */
+    cursor: pointer;
+    user-select: none;
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.4);
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(20, 20, 20, 0.8);
+    /* font-weight: 400; */
+    transform: scale(1);
+    transition: transform 0.1s;
+}
+.fil-cir:hover{
+    /* font-weight: 600; */
+    transform: scale(1.1);
+    transition: transform 0s;
+}
+/* Filter -off */
+.fil-dark-off{
+    background-image: linear-gradient(to bottom, #222, var(--heroDark2));
+    color: var(--heroDark);
+    border: 2px solid var(--heroDark2);
+}
+.fil-fire-off{
+    background-image: linear-gradient(to bottom, #222, var(--heroFire2));
+    color: var(--heroFire);
+    border: 2px solid var(--heroFire2);
+}
+.fil-light-off{
+    background-image: linear-gradient(to bottom, #222, var(--heroLight2));
+    color: var(--heroLight);
+    border: 2px solid var(--heroLight2);
+}
+.fil-plant-off{
+    background-image: linear-gradient(to bottom, #222, var(--heroPlant2));
+    color: var(--heroPlant);
+    border: 2px solid var(--heroPlant2);
+}
+.fil-water-off{
+    background-image: linear-gradient(to bottom, #222, var(--heroWater2));
+    color: var(--heroWater);
+    border: 2px solid var(--heroWater2);
+}
+
+/* Filter -on */
+.fil-dark-on{
+    background-image: linear-gradient(to bottom, var(--heroDark), var(--heroDark2));
+    border: 2px solid var(--heroDark2);
+}
+.fil-fire-on{
+    background-image: linear-gradient(to bottom, var(--heroFire), var(--heroFire2));
+    border: 2px solid var(--heroFire2);
+}
+.fil-light-on{
+    background-image: linear-gradient(to bottom, var(--heroLight), var(--heroLight2));
+    border: 2px solid var(--heroLight2);
+}
+.fil-plant-on{
+    background-image: linear-gradient(to bottom, var(--heroPlant), var(--heroPlant2));
+    border: 2px solid var(--heroPlant2);
+}
+.fil-water-on{
+    background-image: linear-gradient(to bottom, var(--heroWater), var(--heroWater2));
+    border: 2px solid var(--heroWater2);
+}
+
+
+
+/* ---Hero Rarity--- */
+.fil-tag{
+    font-family: 'Ubuntu', sans-serif;
+    height: 45px; width: auto;
+    min-width: 50px;
+    margin: 4px;
+    padding: 0px 8px;
+    cursor: pointer;
+    user-select: none;
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.4);
+    border-radius: 5px;
+    /* color: #fff; */
+    color: var(--heroStatNumb);
+    /* font-weight: 400; */
+    transform: scale(1);
+    transition: transform 0.5s;
+    /* background-image: linear-gradient(to bottom, var(--heroStatBG), var(--heroToggle)); */
+}
+.fil-tag:hover{
+    /* font-weight: 600; */
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+/* Filter -off */
+.fil-common-off{
+    background-image: linear-gradient(to bottom, #1D1E1D, #2C2C2D);
+    border: 1px solid var(--heroRarityCommon);
+    border-top: 2px solid var(--heroToggleSelect);
+    border-bottom: 2px solid #512608;
+    color: var(--heroStatNumb);
+}
+.fil-rare-off{
+    background-image: linear-gradient(to bottom, #1D1E1D, #2C2C2D);
+    border: 1px solid var(--heroRarityRare);
+    border-top: 2px solid #AAA;
+    border-bottom: 2px solid #444;
+    color: #AAA;
+}
+.fil-crusher-off{
+    background-image: linear-gradient(to bottom, #1D1E1D, #2C2C2D);
+    border: 1px solid var(--heroRarityRare);
+    border-top: 2px solid #EEE;
+    border-bottom: 2px solid #888;
+    color: #EEE;
+}
+.fil-epic-off{
+    background-image: linear-gradient(to bottom, #1D1E1D, #2C2C2D);
+    border: 1px solid #974719;
+    border-top: 2px solid #FEFEA6;
+    border-bottom: 2px solid #B35B00;
+    color: #FF9A20;
+}
+.fil-legendary-off{
+    background-image: linear-gradient(to bottom, #1D1E1D, #2C2C2D);
+    border: 1px solid #FCCC00;
+    border-top: 2px solid #EFD2AF;
+    border-bottom: 2px solid #A35002;
+    color: #FFD307;
+}
+.fil-blitz-off{
+    background-image: linear-gradient(to bottom, #1D1E1D, #2C2C2D);
+    border: 1px solid #316;
+    border-top: 2px solid #316;
+    border-bottom: 2px solid #629;
+    /* color: #518 #C3C; */
+    color: #A2A;
+}
+/* Filter -on */
+.fil-common-on{
+    background-image: linear-gradient(to bottom, var(--heroStatBG), var(--heroToggle));
+    border: 1px solid var(--heroRarityCommon);
+    border-top: 2px solid var(--heroToggleSelect);
+    border-bottom: 2px solid #512608;
+    color: var(--heroStatNumb);
+}
+.fil-rare-on{
+    background-image: linear-gradient(to bottom, #5a5a5a, #8f8f8f);
+    border: 1px solid var(--heroRarityRare);
+    border-top: 2px solid #AAA;
+    border-bottom: 2px solid #444;
+    color: #222;
+}
+.fil-crusher-on{
+    background-image: linear-gradient(to bottom, #999, #DDD);
+    border: 1px solid var(--heroRarityRare);
+    border-top: 2px solid #EEE;
+    border-bottom: 2px solid #888;
+    color: #222;
+}
+.fil-epic-on{
+    background-image: linear-gradient(to bottom, #FE8100, #FF9A20);
+    border: 1px solid #974719;
+    border-top: 2px solid #FEFEA6;
+    border-bottom: 2px solid #B35B00;
+    color: #A53C00;
+}
+.fil-legendary-on{
+    background-image: linear-gradient(to bottom, #EEE, #BBB);
+    border: 1px solid #FCCC00;
+    border-top: 2px solid #EFD2AF;
+    border-bottom: 2px solid #A35002;
+    color: #FFD307;
+    text-shadow: 1px 1px 2px #000,
+                 0px 0px 3px #000C;
+}
+.fil-blitz-on{
+    background-image: linear-gradient(to bottom, #417, #205);
+    border: 1px solid #316;
+    border-top: 2px solid #316;
+    border-bottom: 2px solid #629;
+    color: #C3C;
+    /* #501d8f */
+}
+
+/* ---Hero Class--- */
+.fil-class{
+    font-family: 'Ubuntu', sans-serif;
+    height: 45px; width: auto;
+    min-width: 50px;
+    margin: 4px;
+    padding: 0px 8px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    color: #BBB;
+    font-weight: 400;
+    transform: scale(1);
+}
+/* ---Class [on/off]--- */
+.fil-class-on{
+    /* Filtering, and button is pushed down. */
+    background-image: linear-gradient(to bottom, #A22, #A22, #A22);
+    box-shadow: inset 0px 2px 0px #D77,
+                inset 0px -3px 0px #400;
+}
+.fil-class-on:hover{
+    background-image: linear-gradient(to bottom, #622, #822, #622);
+    box-shadow: inset 0px 3px 0px #400,
+                inset 0px -2px 0px #D77;
+}
+.fil-class-off{
+    /* Not filtering, and button back to normal. */
+    background-image: linear-gradient(to bottom, #522, #522, #522);
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.4),
+                inset 0px 2px 0px #D77,
+                inset 0px -3px 0px #400;
+}
+.fil-class-off:hover{
+    background-image: linear-gradient(to bottom, #822, #A22, #822);
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.4),
+                inset 0px 3px 0px #400,
+                inset 0px -2px 0px #D77;
+}
+
+/* ===============        =============== */
+/* =============== TOGGLE =============== */
+/* ===============        =============== */
+
+/* ---All Toggle Tags--- */
+.tog-tag{
+    font-family: 'Ubuntu', sans-serif;
+    height: 45px; width: auto;
+    min-width: 50px;
+    margin: 4px;
+    padding: 0px 8px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #222;
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.4);
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+}
+/* ---Other--- */
+.tog-hover{
+    border: 1px solid rgb(75, 75, 75);
+    border-top: 2px solid rgb(180, 180, 180);
+    border-bottom: 2px solid rgb(40, 40, 40);
+}
+.tog-hover:hover{
+    background-color: #444;
+}
+.tog-hover-off{
+    border: 1px solid rgb(75, 75, 75);
+    border-top: 2px solid rgb(180, 180, 180);
+    border-bottom: 2px solid rgb(40, 40, 40);
+    background-image: linear-gradient(to bottom, rgba(70, 70, 70, 1), rgba(34, 34, 34, 1));
+}
+.tog-hover-off:hover{
+    background-image: linear-gradient(to bottom, rgba(70, 70, 70, 1), rgba(75, 75, 75, 1));
+}
+
+/* ---toggle_other--- */
+.toggle_other{
+    border: 1px solid rgb(75, 75, 75);
+    border-top: 2px solid rgb(180, 180, 180);
+    border-bottom: 2px solid rgb(40, 40, 40);
+}
+.toggle_other-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.toggle_other-on:hover{
+    background-image: linear-gradient(to bottom, rgb(150, 150, 150), rgba(34, 34, 34, 1));
+}
+.toggle_other-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(150, 150, 150), rgb(90, 90, 90));
+}
+.toggle_other-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(90, 90, 90));
+}
+
+/* .toggle_other2-off{
+    background-image: linear-gradient(to bottom, rgb(150, 150, 150), rgb(90, 90, 90));
+}
+.toggle_other2-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(90, 90, 90));
+} */
+
+/* ---Atk--- */
+.toggleatk{
+    border: 1px solid rgb(200, 75, 75);
+    border-top: 2px solid rgb(250, 150, 150);
+    border-bottom: 2px solid rgb(255, 70, 70);
+}
+.toggleatk-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.toggleatk-on:hover{
+    background-image: linear-gradient(to bottom, rgb(255, 70, 70), rgba(34, 34, 34, 1));
+    border-bottom: 2px solid rgb(160, 10, 10);
+}
+.toggleatk-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(255, 70, 70), rgb(200, 75, 75));
+}
+.toggleatk-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(200, 75, 75));
+    border-bottom: 2px solid rgb(160, 10, 10);
+}
+/* ---HP--- */
+.togglehp{
+    border: 1px solid rgb(75, 200, 75);
+    border-top: 2px solid rgb(150, 250, 150);
+    border-bottom: 2px solid rgb(70, 255, 70);
+    background-color: #222;
+}
+.togglehp-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.togglehp-on:hover{
+    background-image: linear-gradient(to bottom, rgb(70, 255, 70), rgba(34, 34, 34, 1));
+    border-bottom: 2px solid rgb(10, 160, 10);
+}
+.togglehp-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(70, 255, 70), rgb(75, 200, 75));
+}
+.togglehp-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(75, 200, 75));
+    border-bottom: 2px solid rgb(10, 160, 10);
+}
+/* ---Def--- */
+.toggledef{
+    border: 1px solid rgb(75, 75, 200);
+    border-top: 2px solid rgb(150, 150, 250);
+    border-bottom: 2px solid rgb(70, 70, 255);
+    background-color: #222;
+}
+.toggledef-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.toggledef-on:hover{
+    background-image: linear-gradient(to bottom, rgb(70, 70, 255), rgba(34, 34, 34, 1));
+    border-bottom: 2px solid rgb(10, 10, 160);
+}
+.toggledef-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(70, 70, 255), rgb(75, 75, 200));
+}
+.toggledef-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(75, 75, 200));
+    border-bottom: 2px solid rgb(10, 10, 160);
+}
+/* ---Dmg--- */
+.toggledmg{
+    border: 1px solid rgb(185, 20, 20);
+    border-top: 2px solid rgb(250, 150, 150);
+    border-bottom: 2px solid rgb(80, 10, 10);
+    background-color: #222;
+}
+.toggledmg-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.toggledmg-on:hover{
+    background-image: linear-gradient(to bottom, rgb(210, 20, 20), rgba(34, 34, 34, 1));
+}
+.toggledmg-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(210, 20, 20), rgb(170, 20, 20));
+}
+.toggledmg-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(210, 20, 20));
+}
+/* ---Awaken--- */
+.toggleawaken{
+    border: 1px solid rgb(179, 0, 155);
+    border-top: 2px solid rgb(255, 128, 238);
+    border-bottom: 2px solid rgb(77, 0, 66);
+    background-color: #222;
+}
+.toggleawaken-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.toggleawaken-on:hover{
+    background-image: linear-gradient(to bottom, rgb(204, 0, 177), rgba(34, 34, 34, 1));
+}
+.toggleawaken-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(204, 0, 177), rgb(153, 0, 133));
+}
+.toggleawaken-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(204, 0, 177));
+}
+/* ---Star--- */
+.togglestar{
+    border: 1px solid rgb(255, 217, 0);
+    border-top: 2px solid rgb(255, 236, 128);
+    border-bottom: 2px solid rgb(77, 65, 0);
+    background-color: #222;
+}
+.togglestar-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.togglestar-on:hover{
+    background-image: linear-gradient(to bottom, rgb(204, 173, 0), rgba(34, 34, 34, 1));
+}
+.togglestar-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(204, 173, 0), rgb(153, 130, 0));
+}
+.togglestar-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(204, 173, 0));
+}
+
+
+
+
+/* demo */
+
+.tog-demo{
+    font-family: 'Ubuntu', sans-serif;
+    height: 45px; width: auto;
+    min-width: 50px;
+    margin: 4px;
+    padding: 0px 8px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #222;
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.4);
+    border-radius: 5px;
+    /* font-weight: 600; */
+    color: white;
+}
+/* ---Atk--- */
+.tog-r-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.tog-r-on:hover{
+    background-image: linear-gradient(to bottom, rgb(255, 70, 70), rgba(34, 34, 34, 1));
+    border-bottom: 2px solid rgb(160, 10, 10);
+}
+.tog-r-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(255, 70, 70), rgb(200, 75, 75));
+}
+.tog-r-off:hover{
+    /* border-top: 2px solid rgb(160, 10, 10);
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgba(200, 75, 75,1)); */
+    /* background-image: linear-gradient(to bottom, hsla(0,54%,12%,100%), hsla(0,54%,45%,100%)); */
+    /* background-image: linear-gradient(to bottom, hsla(0,54%,12%,100%), hsla(0,88%,33%,100%)); */
+    background-image: linear-gradient(to bottom, hsla(0,54%,16%,100%), hsla(0,64%,40%,100%));
+    /* border-top: 2px solid hsla(0,88%,33%,100%); */
+    border-top: 2px solid hsla(0,72%,54%,100%);
+}
+/* ---HP--- */
+.tog-g-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.tog-g-on:hover{
+    background-image: linear-gradient(to bottom, rgb(70, 255, 70), rgba(34, 34, 34, 1));
+    border-bottom: 2px solid rgb(10, 160, 10);
+}
+.tog-g-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(70, 255, 70), rgb(75, 200, 75));
+}
+.tog-g-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(75, 200, 75));
+    border-top: 2px solid rgb(10, 160, 10);
+}
+/* ---Def--- */
+.tog-b-on{
+    /* Displaying the column, and button empties out. */
+    background-color: #222;
+}
+.tog-b-on:hover{
+    background-image: linear-gradient(to bottom, rgb(70, 70, 255), rgba(34, 34, 34, 1));
+    border-bottom: 2px solid rgb(10, 10, 160);
+}
+.tog-b-off{
+    /* Hidding the column, and button filled up. */
+    background-image: linear-gradient(to bottom, rgb(70, 70, 255), rgb(75, 75, 200));
+}
+.tog-b-off:hover{
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgb(75, 75, 200));
+    border-top: 2px solid rgb(10, 10, 160);
+}

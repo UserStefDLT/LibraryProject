@@ -1,0 +1,30 @@
+        /* Contains [text] and [color] */
+        .color-card{
+            height: 72px; width: 72px;
+            transition: all 0.25s ease-in-out;
+        }
+        .color-card:hover{
+            transform: rotate(10deg);
+            transition: all 0.25s ease-in-out;
+        }
+
+        /* Only contains [color] */
+        .color-box{
+            height: 44px; width: 72px;
+            transition: all 0.25s ease-in-out;
+            border-radius: 0px;
+        }
+        .color-box:hover{
+            transform: rotate(10deg);
+            transition: all 0.25s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        /* Only contains [text] */
+        .color-text{
+            height: auto; width: 72px;
+            position: relative; 
+            top: 4px; 
+            font-weight: 600;
+            text-align: center;
+        }
