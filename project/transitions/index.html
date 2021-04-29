@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transitions</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/UserStefDLT/WebResources/master/Images/icon_st.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <!-- <link rel="stylesheet" href="color-project.css"> -->
+    <style>
+        .grid-area{
+            height: 140px; width: 140px;
+            position: relative;
+            top: 0;
+        }
+        .coin{
+            /* position: relative; */
+            position: absolute;
+            height: 20px; width: 20px;
+            top: 100px;
+            left: 0px;
+            transition-duration: 500ms;
+            transition-property: top, left;
+            border-radius: 50%;
+        }
+        .coin-color{
+            background-color: hsla(36, 60%, 60%, 100%);
+            border: 3px outset hsla(36, 60%, 40%, 100%);
+        }
+        .box-linear{
+            top: 0px;
+            left: 100px;
+            /* transition-duration: 1000ms;
+            transition-property: top, left;
+            transition-timing-function: linear; */
+            transition: 1000ms top linear, 1000ms left linear;
+        }
+        .box-ease-in{
+            top: 0px;
+            left: 100px;
+            /* transition-duration: 1000ms;
+            transition-property: top, left;
+            transition-timing-function: ease-in; */
+            transition: 1000ms top ease-in, 1000ms left linear;
+        }
+        .box-ease-out{
+            top: 0px;
+            left: 100px;
+            /* transition-duration: 1000ms;
+            transition-property: top, left;
+            transition-timing-function: ease-out; */
+            transition: 1000ms top ease-out, 1000ms left linear;
+        }
+        .box-ease-in-out{
+            top: 0px;
+            left: 100px;
+            /* transition-duration: 1000ms;
+            transition-property: top, left;
+            transition-timing-function: ease-in-out; */
+            transition: 1000ms top ease-in-out, 1000ms left linear;
+        }
+        .box-cubic-bezier{
+            top: 0px;
+            left: 100px;
+            /* transition-duration: 1000ms;
+            transition-property: top, left;
+            transition-timing-function: ease-in-out; */
+            transition: 1000ms top cubic-bezier(0.68, -0.55, 0.27, 1.55), 1000ms left linear;
+        }
+        
+        
+        .btn-coin{
+            /* margin: 0px 4px; */
+            background-color: hsla(36, 40%, 40%, 100%);
+            transition-duration: 100ms;
+            transition-property: background-color;
+            /* border: 2px outset hsla(36, 50%, 50%, 100%); */
+        }
+        .btn-coin:hover{
+            background-color: hsla(36, 50%, 50%, 100%);
+            transition-duration: 100ms;
+            transition-property: background-color;
+            /* border: 2px outset hsla(36, 50%, 50%, 100%); */
+        }
+    
+    </style>
+    <link rel="stylesheet" href="../../styles/end.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="row justify-content-md-center pt-2">
+            <div class="h1 title-font"><a href="../../" class="normal">Library📚</a>: Transitions</div>
+        </div>
+        <div class="row justify-content-md-center pb-2">
+            <div class="h4 title-font" style="color: #aaa">Subtitle...</div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row justify-content-md-center pt-2">
+            <div class="h3 title-font">Category</div>
+        </div>
+        <div class="row justify-content-md-center pb-2">
+            <div class="sub">Description of the category.</div>
+        </div>
+        <div class="row justify-content-md-center pb-2">
+            <div id="container1" class="sample row grid-area">
+                <div id="coin2" class="coin bg-success">&nbsp;</div>
+                <div id="coin" class="coin coin-color">&nbsp;</div>
+                <!-- <div id="coin" class="btn btn-light">&nbsp;</div>
+                <div id="coin2" class="btn btn-success">&nbsp;</div> -->
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div id="container2" class="form-row">
+                <div data-toggle="box-linear" class="btn btn-success mr-1">Linear</div>
+                <div data-toggle="box-ease-in" class="btn btn-primary mr-1">Ease in</div>
+                <div data-toggle="box-ease-out" class="btn btn-primary mr-1">Ease out</div>
+                <div data-toggle="box-ease-in-out" class="btn btn-info mr-1">Ease in out</div>
+                <div data-toggle="box-cubic-bezier" class="btn btn-danger mr-1">Cubit bezier</div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="name-end">by St&eacute;fano.</div>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script>
+        let coin = document.getElementById('coin');
+        let coin2 = document.getElementById('coin2');
+        window.addEventListener('click', (ev)=>{
+            if(ev.target.dataset.toggle != null){
+                if(coin.classList.length > 2){
+                    let classL = coin.classList;
+                    coin.classList.toggle(coin.classList[2]);
+                    coin2.classList.toggle("box-linear");
+                } else {
+                    coin.classList.toggle(ev.target.dataset.toggle);
+                    coin2.classList.toggle("box-linear");
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+
+/* ───────────────  ───────────────  ─────────────── */
+/* ↓ example of grid ↓ */
+/* .pricing__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: var(--spacer-md);
+} */
+
+/* ↓ This one is for 'sass' ↓ */
+/* .card{ 
+    margin: 1em;
+    &--body{
+        color: red;
+    }
+} */
+
+/* ───────────────  ───────────────  ─────────────── */
+/* '--' is used for variations of something, like colors. */
+/* '__' is used for the elemens inside. */
+/* In this way it is easier to remember where it belongs. */
+/* 
+.card {}
+.card--important {}
+.card__title {}
+.card__price {} 
+*/
+
+
+/* ───────────────  ───────────────  ─────────────── */

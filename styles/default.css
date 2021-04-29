@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Ubuntu|Satisfy&display=swap');
+
+:root{
+    /* --ff: "Oxygen", sans-serif; */
+    --ff: 'Ubuntu', sans-serif;
+    --ff1: 'Alegreya', serif;
+    --ffz: 'Satisfy', cursive;
+    /* --ff: "Fira Sans", sans-serif; */
+
+    --fq-n: 300;
+    --fq-m: 600;
+    --fq-b: 800;
+
+    --fs-1: 1rem;
+    --fs-2: 2rem;
+    --fs-3: 3rem;
+    --fs-4: 4rem;
+    --fs-5: 5rem;
+    --fs-6: 6rem;
+    --fs-p: 1rem;
+    /* --fs-2: 5rem;
+    --fs-3: 2rem;
+    --fs-p: 1rem; */
+
+    --primary-clr: #225560;
+    --secondary-clr: #36213E;
+    --secondary-clr-light: #554971;
+    --accent-clr: #EF6461;
+
+    /* margins, paddings */
+    --spacer: 1rem;
+    --spacer-md: calc(var(--spacer) * 2);
+    --spacer-lg: calc(var(--spacer) * 2);
+
+    --shadow: 0 0 1em rgba(0,0,0, .25);
+    --shadow2: 2px 2px 2px rgba(20,20,20, .54);
+    --br: 5px;
+}
+
+
