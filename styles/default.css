@@ -18,9 +18,6 @@
     --fs-5: 5rem;
     --fs-6: 6rem;
     --fs-p: 1rem;
-    /* --fs-2: 5rem;
-    --fs-3: 2rem;
-    --fs-p: 1rem; */
 
     --primary-clr: #225560;
     --secondary-clr: #36213E;
@@ -35,6 +32,23 @@
     --shadow: 0 0 1em rgba(0,0,0, .25);
     --shadow2: 2px 2px 2px rgba(20,20,20, .54);
     --br: 5px;
+
+    --shelve-w: 100vw;
+    --card-w90: 90vw;
+    --card-w70: 70vw;
+    --card-w40: 40vw;
+
+    --sz-1: 1rem;
+    --sz-2: 2rem;
+    --sz-3: 3rem;
+    --sz-4: 4rem;
+    --sz-5: 5rem;
+    --sz-6: 6rem;
 }
 
+/* .sz-1{ font-size: var(--fs-1); }
+.sz-2{ font-size: var(--fs-2); }
+.sz-3{ font-size: var(--fs-3); }
+.sz-4{ font-size: var(--fs-4); }
+.sz-5{ font-size: var(--fs-5); } */
 

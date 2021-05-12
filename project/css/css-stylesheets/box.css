@@ -1,0 +1,80 @@
+:root{
+    --box-h: 140px;
+    --box-w: 320px;
+    --ibox-h: 200px;
+    --ibox-w: 360px;
+}
+
+.my-container{
+    height: auto; width: 70vw;
+    margin: 3em auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+}
+
+/* box -- outset */
+.box{
+    height: var(--box-h); width: var(--box-w);
+    color: black;
+    background: white;
+    margin: auto; padding: 2em;
+    position: relative;
+}
+.box0{
+    box-shadow: 0 4px 5px -2px #4448,
+                0 20px 0px -10px cyan,
+                0 24px 5px -12px #4448,
+                0 40px 0px -20px magenta,
+                0 44px 5px -22px #4448,
+                0 60px 0px -30px yellow,
+                0 64px 5px -32px #4448;
+}
+.box1{
+    box-shadow: 0 0 0 10px cyan,
+                0 0 0 20px magenta,
+                0 0 0 30px yellow;
+}
+.box3{
+    box-shadow: 0 20px 0 -10px cyan,
+                0 40px 0 -20px magenta,
+                0 60px 0 -30px yellow;
+}
+
+.box7{
+    box-shadow: 0 9px 5px -8px rgba(0,0,0,.35);
+}
+.box7::before,
+.box7::after{
+    content: '';
+    position: absolute;
+    top: 90%;
+    bottom: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.8);
+    z-index: -1;
+}
+.box7::before{
+    background: lightblue;
+    left: 2px;
+    right: 20px;
+    transform: rotate(-3deg);
+}
+.box7::after{
+    background: pink;
+    left: 20px;
+    right: 2px;
+    transform: rotate(3deg);
+}
+/* box -- inset */
+.ibox{
+    height: var(--ibox-h); width: var(--ibox-w);
+    color: black;
+    background: white;
+    margin: auto; padding: 3.5em;
+    position: relative;
+}
+.ibox2{
+    box-shadow: inset 0 0 0 10px cyan,
+                inset 0 0 0 20px magenta,
+                inset 0 0 0 30px yellow;
+}
