@@ -1,0 +1,89 @@
+
+:root{
+    --day-bg: #eeee;
+    --day-txt: #2222;
+
+    --night-bg: rgb(20, 24, 29);
+    --night-txt: rgb(240, 240, 240);
+}
+body{
+    background-color: var(--night-bg);
+    color: var(--night-txt);
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+
+.nav-btn{
+    margin: 8px;
+    padding: .375rem .75rem;
+    
+    display: inline-block;
+    line-height: 1.5;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    
+    border: 2px solid white;
+    border-radius: 5px;
+
+    box-shadow: var(--shadow-btn);
+    text-shadow: var(--shadow-txt);
+
+    background-image: linear-gradient(160deg, #123, #456, #789);
+    background-size: 300%;
+
+    user-select: none;
+    transition: color 0.2s ease-in-out;
+}
+.nav-btn:hover,
+.nav-btn:focus{
+    color: white;
+    transition: color 0.2s ease-in-out;
+}
+a:hover.nav-btn, a:focus.nav-btn{
+    text-decoration: underline;
+}
+
+.btn-stars{
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+}
+.btn-stars:hover,
+.btn-stars:focus{
+    border: 2px dotted #fff;
+    color: #fff;
+    border-radius: 10px;
+    transition: border 0.2s ease-in-out, border-radius 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+
+.btn-emojis{
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+}
+.btn-emojis:hover,
+.btn-emojis:focus{
+    border: 2px dotted #DD2;
+    color: #DD2;
+    border-radius: 10px;
+    transition: border 0.2s ease-in-out, border-radius 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+
+.btn-space{
+    border: 2px double #fff;
+    color: #000;
+    /* font-weight: 600; */
+    text-shadow: var(--glow-txt);
+    transition: transform 0.2s ease-in-out;
+}
+.btn-space:hover,
+.btn-space:focus{
+    transform: scale(1.1);
+    color: #fff;
+    transition: transform 0.4s ease-in-out, color 0.2s ease-in-out;
+}
+

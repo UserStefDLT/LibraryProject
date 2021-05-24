@@ -1,0 +1,240 @@
+/* From the Cards file */
+
+:root{
+    --card-scale: 400px;
+    --card-title-sz: 48px;
+    --card-content-sz: calc(100% - var(--card-title-sz));
+
+    --sky00: linear-gradient(
+        180deg, 
+        #2d3a4e, #2e3a4e, #323f53, #313e52, #3f4a5c, #4b5769, #606a7a, #626c7c, #757e88, #8e949d, #a1a1a1, #a1a09e
+    );
+    --sky01: linear-gradient(
+        180deg, 
+        #2d3a4e, 
+        #323f53,  
+                   #3f4a5c, 
+                   #4b5769,
+        #606a7a,  
+        #757e88, 
+        #8e949d, 
+        #a1a1a1, #a1a09e
+    );
+
+    --card-st-bg: hsla(295, 54%, 12%, 89%);
+    /* --card-st-bg: #053565e3; */
+    --card-scale: 300px;
+
+    
+    --accent-clr: #EF6461;
+    --border-shadow: 0 0 0 1px var(--accent-clr);
+    --border-inshadow: inset 0 0 0 1px var(--accent-clr);
+
+
+    --pad: 8px;
+    --pad2: 16px;
+    --pad3: 24px;
+    --pad4: 32px;
+
+    --card-title-bg-clr: #fff;
+    --card-title-border-clr: #000;
+    
+    /* --card-title-bg-clr: #048;
+    --card-title-border-clr: #0ff; */
+
+    /* --card-title-bg-clr: #147;
+    --card-title-border-clr: #712; */
+
+    /* --card-title-bg-clr: #712;
+    --card-title-border-clr: #ff7; */
+
+    /* --card-title-bg-clr: #712;
+    --card-title-border-clr: #ec4; */
+
+    --txt-shadow: 0px 0px 2px rgba(20, 20, 20, 0.4);
+    --txt-shadow1: 1px 1px 2px rgba(20, 20, 20, 0.4);
+    --txt-shadow2: 2px 2px 2px rgba(20, 20, 20, 0.4);
+
+}
+.blk{
+    height: 1em; width: 16px;
+    background: #f0f;
+}
+.the-blk{
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.deck{
+    width: 100%;
+    /* padding: 0 15px; */
+    padding: 0;
+    margin: 8px auto;
+    flex-wrap: wrap;
+}
+.cardst{
+    font-size: 24px;
+    --card-scale: 50px;
+    height: calc(var(--card-scale) * 8.12); 
+    width: calc(var(--card-scale) * 3.75);
+    border: 0px; margin: 5px; padding: 0px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    /* border: 1px solid transparent; */
+    color: white;
+    text-shadow: var(--txt-shadow2);
+    /* font-size: 1rem; */
+    /* line-height: 1.5; */
+    border-radius: 10px;
+}
+.card-title{
+    font-size: 24px;
+    height: var(--card-title-sz); 
+    width: 100%;
+    margin: 0px; padding: 0px;
+    border: 0px; 
+    box-shadow: var(--border-shadow);
+    line-height: 2;
+    position: relative;
+    z-index: 0;
+
+    /* --card-title-bg-clr: #048;
+    --card-title-border-clr: #0ff; */
+    --card-title-bg-clr: #712;
+    --card-title-border-clr: #ec4;
+}
+.card-title::before{
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: var(--pad);
+    left: var(--pad);
+    right: var(--pad);
+    bottom: var(--pad);
+    border-top: var(--pad2) solid var(--card-title-border-clr);
+    border-bottom: var(--pad2) solid var(--card-title-border-clr);
+    border-left: var(--pad2) solid transparent;
+    border-right: var(--pad2) solid transparent;
+}
+.card-title::after{
+    content: '';
+    position: absolute;
+    --pad: 12px;
+    --pad2: 12px;
+    top: var(--pad);
+    left: var(--pad);
+    right: var(--pad);
+    bottom: var(--pad);
+    border-top: var(--pad2) solid var(--card-title-bg-clr);
+    border-bottom: var(--pad2) solid var(--card-title-bg-clr);
+    border-left: var(--pad2) solid transparent;
+    border-right: var(--pad2) solid transparent;
+    z-index: -1;
+}
+
+.card-title2{
+    font-size: 24px;
+    height: var(--card-title-sz); 
+    width: 100%;
+    margin: 0px; padding: 0px;
+    border: 0px; 
+    box-shadow: var(--border-shadow);
+    line-height: 2;
+    position: relative;
+    z-index: 0;
+    
+    --card-title-bg-clr: #712;
+    --card-title-border-clr: #ff7;
+}
+.card-title2::before{
+    content: '';
+    position: absolute;
+    z-index: -2;
+    /* --card-title-border-clr: #ff7; */
+    top: var(--pad);
+    left: var(--pad);
+    right: var(--pad);
+    bottom: var(--pad);
+    border-top: var(--pad2) solid var(--card-title-border-clr);
+    border-bottom: var(--pad2) solid var(--card-title-border-clr);
+    border-left: var(--pad2) solid transparent;
+    border-right: var(--pad2) solid transparent;
+}
+.card-title2::after{
+    content: '';
+    position: absolute;
+    --pad: 12px;
+    --pad2: 12px;
+    /* --card-title-bg-clr: #712; */
+    top: var(--pad);
+    left: var(--pad);
+    right: var(--pad);
+    bottom: var(--pad);
+    border-top: var(--pad2) solid var(--card-title-bg-clr);
+    border-bottom: var(--pad2) solid var(--card-title-bg-clr);
+    border-left: var(--pad2) solid transparent;
+    border-right: var(--pad2) solid transparent;
+    z-index: -1;
+}
+
+.card-content{
+    font-size: 16px;
+    height: var(--card-content-sz); 
+    width: 100%;
+    margin: 0px; padding: 0px;
+    border: 0px; 
+    box-shadow: var(--border-shadow);
+    /* line-height: 1.5; */
+    
+}
+
+.card-start{
+    background: var(--card-st-bg);
+    color: white;
+    border-color: white;
+}
+
+.card-00{
+    background-image: var(--sky01);
+    /* background-size: 300px; */
+}
+
+.card-01{
+    background: #123;
+    background-image: linear-gradient(160deg, #123, #456, #789);
+}
+.card-02{
+    background-image: linear-gradient(
+        45deg, 
+        #845ec2, 
+        #d65db1, 
+        #ff6f91, 
+        #ff9671, 
+        #ffc75f, 
+        #f9f871);
+}
+.card-03{ background-image: linear-gradient(#e66465, #9198e5); }
+.card-04{ background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c); }
+.card-05{ background-image: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); }
+.card-06{ background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); }
+.card-07{ background-image: linear-gradient(160deg, #123, #456, #789); }
+
+
+.card-thin{
+    width: calc(var(--card-scale) * .54);
+}

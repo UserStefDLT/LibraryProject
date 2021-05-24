@@ -1,0 +1,191 @@
+
+:root {
+    --c0: hsla(36, 50%, 50%, 100%);
+    --c1: hsla(72, 50%, 50%, 100%);
+    --c2: hsla(108, 50%, 50%, 100%);
+    --c3: hsla(144, 50%, 50%, 100%);
+    --c4: hsla(180, 50%, 50%, 100%);
+    --c5: hsla(216, 50%, 50%, 100%);
+    --c6: hsla(252, 50%, 50%, 100%);
+    --c7: hsla(288, 50%, 50%, 100%);
+    --c8: hsla(324, 50%, 50%, 100%);
+    --c9: hsla(360, 50%, 50%, 100%);
+
+    --mc0: hsla(36, 40%, 20%, 80%);
+    --mc1: hsla(72, 40%, 20%, 80%);
+    --mc2: hsla(108, 40%, 20%, 80%);
+    --mc3: hsla(144, 40%, 20%, 80%);
+    --mc4: hsla(180, 40%, 20%, 80%);
+    --mc5: hsla(216, 40%, 20%, 80%);
+    --mc6: hsla(252, 40%, 20%, 80%);
+    --mc7: hsla(288, 40%, 20%, 80%);
+    --mc8: hsla(324, 40%, 20%, 80%);
+    --mc9: hsla(360, 40%, 20%, 80%);
+
+    --bc0: hsla(36, 60%, 10%, 100%);
+    --bc1: hsla(72, 60%, 10%, 100%);
+    --bc2: hsla(108, 60%, 10%, 100%);
+    --bc3: hsla(144, 60%, 10%, 100%);
+    --bc4: hsla(180, 60%, 10%, 100%);
+    --bc5: hsla(216, 60%, 10%, 100%);
+    --bc6: hsla(252, 60%, 10%, 100%);
+    --bc7: hsla(288, 60%, 10%, 100%);
+    --bc8: hsla(324, 60%, 10%, 100%);
+    --bc9: hsla(360, 60%, 10%, 100%);
+
+    /* by default. */
+    --font-sz: 16px;
+}
+
+/* Project-Wise */
+/* .navbar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 0.25em;
+    height: auto;
+    width: 80vw;
+    margin: 0 auto;
+    border: solid 3px #7775;
+    border-bottom: double 3px #7775;
+    border-radius: 5px;
+    padding: .5em .25em;
+} */
+
+/* .bbtn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+} */
+
+/* .my-btn {
+    display: inline-block;
+    color: var(--text-clr);
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+} */
+
+/* .btn--nav {
+    color: var(--text-clr);
+    background: #2228;
+    border: solid 2px white;
+    border-left: solid 0px;
+    border-right: solid 0px;
+    border-radius: 0px;
+    transition: border-radius 100ms ease-in-out;
+    margin: 0 .25em;
+} */
+
+/* .btn--nav:hover {
+    border-radius: 10px;
+    transition: border-radius 100ms ease-in-out;
+} */
+
+.clr-magenta {
+    color: var(--c8);
+    background: var(--bc8);
+    border-color: var(--c8);
+}
+
+.clr-3d {
+    color: var(--text-clr);
+    background: #2228;
+    border-color: var(--text-clr);
+    box-shadow: 0px 0px 0px 0px #0008;
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out, border-radius 100ms ease-in-out;
+}
+.clr-3d:hover {
+    transform: scale(1.2);
+    /* background: var(--pageBG); */
+    background: var(--bc6);
+    box-shadow: 0px 20px 5px -15px #0008;
+    transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out, border-radius 100ms ease-in-out;
+}
+
+.clr-cards {
+    /* color: var(--c4);
+    background: var(--bc4);
+    border-color: var(--c4); */
+
+    color: var(--text-clr);
+    background: #2228;
+    border-color: var(--text-clr);
+    box-shadow: 0px 0px 0px 0px #0008;
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out, border-radius 100ms ease-in-out;
+}
+.clr-cards:hover,
+.clr-cards:focus {
+    /* color: var(--c4); */
+    background: var(--bc6);
+    /* border-color: var(--c4); */
+
+    transform: scale(1.2);
+    /* background: var(--pageBG); */
+    box-shadow: 0px 20px 5px -15px #0008;
+    transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out, border-radius 100ms ease-in-out;
+}
+
+.clr-cards2 {
+    color: var(--text-clr);
+    background: var(--pageBG);
+    border-color: var(--text-clr);
+
+
+    box-shadow: 0px 0px 0px 0px #0008;
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out, border-radius 100ms ease-in-out;
+}
+.clr-cards2:hover,
+.clr-cards2:focus {
+    color: var(--c6);
+    background: var(--bc6);
+    border-color: var(--c6);
+
+
+    transform: scale(1.2);
+    box-shadow: 0px 20px 5px -15px #0008;
+    transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out, border-radius 100ms ease-in-out;
+}
+
+
+.clr-time {
+    /* color: var(--c4);
+    background: var(--bc4);
+    border-color: var(--c4); */
+
+    color: var(--text-clr);
+    background: #2228;
+    border-color: var(--text-clr);
+    box-shadow: 0px 0px 0px 0px #0008;
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out, border-radius 100ms ease-in-out;
+}
+.clr-time:hover,
+.clr-time:focus {
+    /* color: var(--c4); */
+    background: var(--bc4);
+    /* border-color: var(--c4); */
+
+    transform: scale(1.2);
+    /* background: var(--pageBG); */
+    box-shadow: 0px 20px 5px -15px #0008;
+    transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out, border-radius 100ms ease-in-out;
+}

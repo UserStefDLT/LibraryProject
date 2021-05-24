@@ -1,0 +1,100 @@
+
+/* CSS Style */
+/* developping a style for the css files */
+
+
+/* CSS files
+    • Root.css 
+        → with all the root variables.
+    • Main.css
+        → all the tag classes.
+    • Btns.css
+        → Button styles for 'a' (links), or 'button' elements alike.
+    • 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* table of contents
+
+    1. global styles
+
+    2. typography
+
+    3. components
+
+*/
+
+/*  ================
+    global variables
+    ================  */
+
+/*  ▄▄▄▄▄▄▄▄▄▄
+    Components
+    ▀▀▀▀▀▀▀▀▀▀  */
+
+/*  ▄▄▄▄▄▄ ▄▄▄▄▄▄
+    Button Styles
+    ▀▀▀▀▀▀ ▀▀▀▀▀▀  */
+
+/*  ⌜             ⌝
+     Button Styles 
+    ⌞             ⌟  */
+
+/*  */
+
+
+
+/*  */
+/* Characters that could help:
+    ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄    
+    ✓✗
+    .▀.▐.▌.▄.█. (254)
+    ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀
+    ▄▄▄▄▄ Arrows ▄▄▄▄▄
+    ↔, ↕, 
+    ↖, ↗, ↘, ↙, ↶, ↷, ⤸, ⤹, 
+    ↺, ↻, ⤼, ⤽, ⤤, ⤣, ⤥, ⤦, 
+    ⇄, ⇅, ⇆, ⇵, ⥮, ⥯,⇋, ⇌, 
+    ▄▄▄▄▄ Grouping ▄▄▄▄▄
+    ❲, ❳, ⟦, ⟧, ⟨, ⟩, ⟪, ⟫, ⟬, ⟭, 
+    ⦅, ⦆, ⦋, ⦌, ⦍, ⦎, ⦏, ⦐, ⦑, ⦒, 
+    ⦓, ⦔, ⦕, ⦖, ⎰, ⎱, 
+    ▄▄▄▄▄ Frames ▄▄▄▄▄
+    ⌜⌝ ⌞⌟ ⌜⌟ ⌞⌝ ⌜  ⌝
+    ⌞⌟ ⌜⌝ ⌞⌝ ⌜⌟ ⌞  ⌟
+    ▄▄▄▄▄ Evaluation ▄▄▄▄▄
+    ✓, ✗, 
+    ▄▄▄▄▄ Circles ▄▄▄▄▄
+    ○, ◯, ⨀, ⨁, ⨂, 
+    ⦰, ⦱, ⦲, ⦳, ⦴, 
+    ⦵, ⦶, ⦷, ⦹, 
+    ⦻, ⦼, ⦾, ⦿, 
+    ⧀, ⧁, ⧂, ⧃, 
+    ⨭, ⨮, ⨴, ⨵, ⨶, ⨷, ⨸, 
+    ▄▄▄▄▄ Squares ▄▄▄▄▄
+    ◻, ◼, 
+    ⧄, ⧅, ⧉, 
+    ▄▄▄▄▄ Triangles ▄▄▄▄▄
+    △, ▴, ▵, ▸, ▹, 
+    ▽, ▾, ▿, ◂, ◃, 
+    ⊲, ⊳, ⊴, ⊵, 
+    ◸, ◹, ◺, ⊿,
+    ⧍, ⧎, ⧏, ⧐, 
+    ◬, ⨹, ⨺, ⨻, 
+    ⩹, ⩺, ⋖, ⋗, 
+    ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄
+    ===== ===== ===== ===== =====
+    ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀
+*/

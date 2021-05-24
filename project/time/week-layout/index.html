@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>📚CSS - Week</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/UserStefDLT/WebResources/master/Images/icon_st.png">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/default.css">
+    <link rel="stylesheet" href="../../../styles/box.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .my-container{
+            height: auto; width: 70vw;
+            margin: 1em auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1em;
+        }
+        .box{
+            height: var(--box-h2); width: var(--box-w2);
+            color: black;
+            background: white;
+            margin: auto; padding: 1em;
+            position: relative;
+            line-height: 1;
+        }
+        .box0{
+            box-shadow: 0 4px 5px -2px #4448,
+                        0 20px 0px -10px cyan,
+                        0 24px 5px -12px #4448,
+                        0 40px 0px -20px magenta,
+                        0 44px 5px -22px #4448,
+                        0 60px 0px -30px yellow,
+                        0 64px 5px -32px #4448;
+        }
+    </style>
+    <style>
+        .weekview,
+        .weeklayout,
+        .daylayout{
+            background: #123;
+            color: white;
+        }
+
+        .weekview{
+            border: 2px solid #00f8;
+        }
+        
+        .weeklayout,
+        .daylayout{
+            border: 2px solid #0ff8;
+        }
+        .weekview{
+            width: 70%;
+            margin: 12px auto;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-column-gap: 0px;
+            /* grid-template-rows: 1fr 24fr;
+            grid-row-gap: 0px; */
+        }
+        .weeklayout{
+            grid-column: 1 / 8;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-column-gap: 0px;
+            grid-auto-rows: minmax(1em, auto);
+        }
+        .weeklayout span{
+            border: 2px solid #ff08;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+        }
+        .daylayout{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0px;
+            /* grid-template-rows: repeat(24, 1fr);
+            grid-row-gap: 0px; */
+        }
+        .hourblock{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 24px;
+            box-shadow: 0 3px 0 -2px #7895;
+        }
+        #title{
+            font-size: 24px;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../styles/end.css">
+</head>
+<body class="day">
+    <div id="title"><a href="../../">Library📚</a>: Week</div>
+    <div class="subtitle quote hidden">"Time....."</div>
+    <div id="nav" class="nav hidden">
+        <ul>
+            <li><a href="#" class="nav-btn">start button</a></li>
+        </ul>
+    </div>
+
+    <div id="WeekView" class="weekview">
+        <div id="WeekHead" class="weeklayout">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+        </div>
+        <div id="Sun" class="daylayout"></div>
+        <div id="Mon" class="daylayout"></div>
+        <div id="Tue" class="daylayout"></div>
+        <div id="Wed" class="daylayout"></div>
+        <div id="Thu" class="daylayout"></div>
+        <div id="Fri" class="daylayout"></div>
+        <div id="Sat" class="daylayout"></div>
+    </div>
+
+
+    <div class="my-container hidden">
+        <div class="box box0 sz-2">
+            <div>box-shadow: outside below</div>
+            <div class="tag-tr">box0</div>
+        </div>
+        <div class="box box7 sz-2">
+            <div>::before ::after box-shadow</div>
+            <div class="tag-tr">box7</div>
+        </div>
+    </div>
+
+    <div class="btmspace"></div>
+    <div class="name-end">by St&eacute;fano.</div>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script>
+        window.addEventListener("load",() =>{
+            console.log(" ── Hello Master ;) ── ");
+        });
+
+        let timeNow = Date.now();
+        console.log(timeNow);
+
+        let dateNow = new Date(timeNow);
+        console.log(dateNow);
+
+        let monthNow = dateNow.getMonth();
+        console.log(monthNow);
+
+        const hours = 24;
+        const n_weekdays = 7;
+        let hour_height = 10;
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const weekdays_ids = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+        const time_cols = ["Month", "Hour"];
+        // let calendar_cols = time_cols.concat(weekdays);
+
+        let startDayFrom = 5;
+        let endDayAt = 24;
+
+        const WeekView = document.querySelector("#WeekView");
+        weekdays.forEach(day => {
+            let weekid = weekdays.indexOf(day);
+            console.log(weekid);
+            console.log(weekdays_ids[weekid]);
+            let today = document.querySelector(`#${weekdays_ids[weekid]}`);
+
+            for(let i = startDayFrom; i<endDayAt; i++){
+                let hourblock = document.createElement("div");
+                hourblock.classList.add("hourblock");
+                hourblock.innerHTML = `${i}:00 h`;
+                // hourblock.innerHTML = ` -- `;
+                // if(day == "Sunday"){ hourblock.innerHTML = `${i}:00 h`; }
+                today.appendChild(hourblock);
+            }
+        });
+
+        /*
+        to do:
+        make it so it loads events.
+        replace hour blocks for event blocks.
+        
+        */
+
+        console.log(" ── All Done cD ── ");
+    </script>
+</body>
+</html>
