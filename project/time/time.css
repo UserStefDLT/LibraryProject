@@ -1,0 +1,43 @@
+.subtitle{
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+}
+#TimeView{
+    font-size: 16px;
+    margin: 1rem auto;
+    width: min(90%, 75rem);
+    display: grid;
+    grid-auto-flow: row;
+}
+.xc{
+    font-size: 24px;
+    border: 3px solid #0ff8;
+    text-align: left;
+    margin: 4px;
+}
+.txe{
+    border-bottom: 3px solid #ff88;
+    color: #0ff8;
+    margin-right: 4px;
+    padding: 4px;
+}
+.nav{
+    width: max-content;
+    margin: 0 auto;
+}
+.nav > a{
+    width: max-content;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #abc;
+    padding: .5em; margin: .5em;
+    text-decoration: none;
+    transition: border-radius 200ms ease-in-out, border 200ms ease-in-out;
+}
+.nav > a:hover,
+.nav > a:focus{
+    border: 1px solid #abc;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: border-radius 200ms ease-in-out, border 200ms ease-in-out;
+}
