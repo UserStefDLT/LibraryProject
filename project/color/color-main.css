@@ -202,7 +202,6 @@ main .wheel-shelf {
     padding: 0 8px;
 
     font-weight: bold;
-    /* text-transform: uppercase; */
     cursor: pointer;
     user-select: none;
 
@@ -228,6 +227,17 @@ main .wheel-shelf {
     inset 0px -11px 2px -10px #9f3,
     inset 0px -11px 2px -10px #9f3
     ;
+}
+.btn-animate::before {
+    content: 'Animate';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    font-weight: normal;
+    text-shadow: 
+    0 0 0 #fff,
+    1px 1px 1px #222;
+    z-index: -1;
 }
 
 .shadow-animation {
