@@ -201,16 +201,16 @@ main .wheel-shelf {
     width: max-content;
     padding: 0 8px;
 
-    font-weight: bold;
+    font-weight: normal;
     cursor: pointer;
     user-select: none;
 
-    background-clip: text;
+    /* background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 
     background-color: #fff;
-    background-image: linear-gradient(#39f, #f39, #9f3);
+    background-image: linear-gradient(#39f, #f39, #9f3); */
 
     box-shadow: 
     -12px -12px 0px -10px #39f,
@@ -228,7 +228,7 @@ main .wheel-shelf {
     inset 0px -11px 2px -10px #9f3
     ;
 }
-.btn-animate::before {
+/* .btn-animate::before {
     content: 'Animate';
     position: absolute;
     top: 0; left: 0;
@@ -238,7 +238,7 @@ main .wheel-shelf {
     0 0 0 #fff,
     1px 1px 1px #222;
     z-index: -1;
-}
+} */
 
 .shadow-animation {
     margin: 60px 0;
