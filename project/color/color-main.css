@@ -27,6 +27,11 @@
     --wheel-radius: 500%;
 }
 
+::-webkit-scrollbar { height: 0px; width: 0px; }
+::-webkit-scrollbar-track { box-shadow: inset 0 0 6px rgba(200, 0, 0, 0.0); }
+::-webkit-scrollbar-thumb { background-color: rgba(0, 180, 180, 0.0); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.7); }
+
 main, main * {
     display: flex;
     align-items: center;
@@ -37,7 +42,7 @@ main, main * {
 main {
     position: relative;
     width: 95vw;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     margin: 3vh auto;
 
     flex-direction: column;
@@ -62,9 +67,9 @@ main {
 main .shelf-title {
     position: absolute;
     top: -1.5em;
-    top: .5em;
+    /* top: .5em; */
     left: .5em;
-    border-bottom: 1px solid #789;
+    /* border-bottom: 1px solid #789; */
     width: max-content;
 }
 
@@ -279,3 +284,26 @@ main .wheel-shelf {
     96% {height: 50%; width: 50%; top: 50px;}
     100% {height: 50%; width: 50%; top: 0px;}
 }
+
+@media (max-width: 540px){
+    .header-subtitle {
+        display: none;
+    }
+    main .shelf-title {
+        top: .5em;
+        padding: 0 4px;
+        box-shadow: 0 2px -1px #789;
+    }
+    main {
+        margin: 1vh auto;
+    }
+    .shelf {
+        margin-top: 1rem;
+        margin-top: 0;
+    }
+
+    main .wheel-shelf {
+        margin: 30px 0;
+    }
+}
+
