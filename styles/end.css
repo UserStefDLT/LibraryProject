@@ -34,5 +34,6 @@
     transition: color 1s ease-out 2s;
 }
 .hidden{
-    display: none;
+    display: none !important; 
+    user-select: none;
 }
