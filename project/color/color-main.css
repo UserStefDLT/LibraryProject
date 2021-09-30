@@ -202,7 +202,7 @@ main .wheel-shelf {
     padding: 0 8px;
 
     font-weight: bold;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     cursor: pointer;
     user-select: none;
 
@@ -210,6 +210,7 @@ main .wheel-shelf {
     -webkit-background-clip: text;
     color: transparent;
 
+    background-color: #fff;
     background-image: linear-gradient(#39f, #f39, #9f3);
 
     box-shadow: 
@@ -292,7 +293,7 @@ main .wheel-shelf {
     main .shelf-title {
         top: .5em;
         padding: 0 4px;
-        box-shadow: 0 2px -1px #789;
+        box-shadow: 0 2px 0 -1px #789;
     }
     main {
         margin: 1vh auto;
